@@ -338,8 +338,22 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 0 var(--spacing-lg);
-    z-index: 10;
+    z-index: 20;
     pointer-events: none;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.indicator.active {
+    background: var(--accent);
+    transform: scale(1.2);
 }
 
 .slider-btn {
@@ -366,6 +380,10 @@ a {
 
 .slider-btn:active {
     transform: scale(0.95);
+}
+
+.slider-btn svg {
+    pointer-events: none;
 }
 
 .hero .container {

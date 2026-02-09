@@ -68,6 +68,37 @@ document.addEventListener('DOMContentLoaded', () => {
         heroSlider.addEventListener('mouseleave', () => {
             slideInterval = setInterval(nextSlide, 5000);
         });
+
+        // Event listeners for controls
+        const prevBtn = document.querySelector('.slider-btn.prev');
+        const nextBtn = document.querySelector('.slider-btn.next');
+
+        if (prevBtn) {
+            console.log('Prev button found, attaching listener');
+            prevBtn.addEventListener('click', (e) => {
+                console.log('Prev button clicked');
+                e.preventDefault();
+                changeSlide(-1);
+            });
+        }
+
+        if (nextBtn) {
+            console.log('Next button found, attaching listener');
+            nextBtn.addEventListener('click', (e) => {
+                console.log('Next button clicked');
+                e.preventDefault();
+                changeSlide(1);
+            });
+        }
+
+        // Event listeners for indicators
+        const indicators = document.querySelectorAll('.indicator');
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                console.log('Indicator clicked', index);
+                goToSlide(index);
+            });
+        });
     }
 });
 
