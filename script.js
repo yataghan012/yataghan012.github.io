@@ -387,23 +387,6 @@ backToTopBtn.addEventListener('click', () => {
 */
 
 // ============================================
-// Hero Slider
-// ============================================
-const heroSlides = document.querySelectorAll('.hero-slide');
-let currentSlide = 0;
-
-if (heroSlides.length > 0) {
-    function nextSlide() {
-        heroSlides[currentSlide].classList.remove('active');
-        currentSlide = (currentSlide + 1) % heroSlides.length;
-        heroSlides[currentSlide].classList.add('active');
-    }
-
-    // Change slide every 5 seconds
-    setInterval(nextSlide, 5000);
-}
-
-// ============================================
 // Console Message for Developers
 // ============================================
 console.log('%cBioArTec Website', 'color: #00D9A3; font-size: 20px; font-weight: bold;');
