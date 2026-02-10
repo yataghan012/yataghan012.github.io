@@ -395,10 +395,9 @@ a {
 .hero-content {
     position: relative;
     z-index: 1;
-    max-width: 600px;
-    margin-right: auto;
-    margin-left: 0;
-    text-align: left;
+    display: flex;
+    align-items: center;
+    max-width: 1280px;
 }
 
 .hero-cta {
@@ -416,7 +415,12 @@ a {
 
 .hero-text {
     color: white;
+    max-width: 700px;
+    /* Limita el ancho del texto */
+    margin-right: auto;
+    /* Empuja el texto a la izquierda */
 }
+
 
 .hero-title {
     font-family: var(--font-display);
@@ -1528,6 +1532,11 @@ a {
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        margin-right: 0;
     }
 
     .dropdown-menu {
