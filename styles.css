@@ -387,7 +387,8 @@ a {
 }
 
 .hero .container {
-    margin-left: 400px;
+    margin-left: 300px;
+    /* ← CAMBIA ESTE VALOR */
     margin-right: auto;
     width: 100%;
 }
@@ -1536,7 +1537,7 @@ a {
 
     .hero-text {
         max-width: 100%;
-        margin-right: 0;
+        padding-left: 10px;
     }
 
     .dropdown-menu {
