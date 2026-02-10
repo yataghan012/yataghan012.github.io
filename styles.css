@@ -149,6 +149,9 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: var(--spacing-md) 0;
+    min-height: 100px;
+    /* Altura fija de la navbar */
+    max-height: 100px;
 }
 
 .logo {
@@ -157,7 +160,7 @@ a {
 }
 
 .logo-image {
-    height: 54px;
+    height: 90px;
     width: auto;
     display: block;
     transition: var(--transition-base);
@@ -753,20 +756,37 @@ a {
    Products Page
    ====================== */
 .page-hero {
-    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    position: relative;
+    background: linear-gradient(135deg, rgba(10, 77, 104, 0.9), rgba(8, 131, 149, 0.85)),
+        url('assets/images/products/eddiekphoto-couple-6653517_1920.jpg') center/cover;
     color: white;
-    padding: var(--spacing-2xl) 0;
+    padding: 8rem 0;
     text-align: center;
+    overflow: hidden;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0, 217, 163, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 217, 163, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+    z-index: 0;
 }
 
 .page-hero h1 {
-    font-family: var(--font-display);
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-    margin-bottom: var(--spacing-sm);
+    position: relative;
+    z-index: 1;
+    font-size: 2.9rem;
 }
 
 .page-hero p {
-    font-size: 1.25rem;
+    position: relative;
+    z-index: 1;
+    font-size: 1.9rem;
     color: rgba(255, 255, 255, 0.9);
 }
 
@@ -1758,4 +1778,51 @@ a {
 
 .news-vertical-card .read-more {
     margin-top: auto;
+}
+
+/* ======================
+   WhatsApp Float Button
+   ====================== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    transition: all var(--transition-base);
+    cursor: pointer;
+}
+
+.whatsapp-float:hover {
+    background: #20BA5A;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float svg {
+    width: 32px;
+    height: 32px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+    }
+
+    .whatsapp-float svg {
+        width: 28px;
+        height: 28px;
+    }
 }
