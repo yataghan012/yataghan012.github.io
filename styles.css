@@ -1352,6 +1352,131 @@ a {
 }
 
 /* ======================
+   Legal Pages (Privacy Policy, Terms)
+   ====================== */
+.legal-content {
+    padding: var(--spacing-2xl) 0;
+    background: white;
+}
+
+.legal-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.legal-section {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.legal-section h2 {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    color: var(--primary);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--accent);
+}
+
+.legal-section h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--primary);
+    margin: var(--spacing-lg) 0 var(--spacing-sm) 0;
+}
+
+.legal-section h4 {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    color: var(--primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.legal-section p {
+    color: var(--gray-700);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+}
+
+.legal-section ul,
+.legal-section ol {
+    margin: var(--spacing-md) 0;
+    padding-left: var(--spacing-xl);
+}
+
+.legal-section li {
+    color: var(--gray-700);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-sm);
+}
+
+.legal-section li strong {
+    color: var(--primary);
+}
+
+.last-updated {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--gray-500);
+    background: var(--gray-100);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    display: inline-block;
+}
+
+.info-box,
+.contact-box {
+    background: var(--gray-50);
+    border-left: 4px solid var(--accent);
+    padding: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+    border-radius: var(--radius-md);
+}
+
+.info-box p,
+.contact-box p {
+    margin-bottom: var(--spacing-xs);
+    color: var(--gray-700);
+}
+
+.info-box p:last-child,
+.contact-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Rights Grid */
+.rights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+}
+
+.right-card {
+    background: var(--gray-50);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-200);
+    transition: all var(--transition-base);
+}
+
+.right-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.right-card h4 {
+    color: var(--accent);
+    font-size: 1rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.right-card p {
+    font-size: 0.9375rem;
+    margin-bottom: 0;
+}
+
+/* ======================
    Responsive Design
    ====================== */
 @media (max-width: 1024px) {
